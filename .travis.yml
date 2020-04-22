@@ -7,7 +7,7 @@ compiler:
 
 before_install:
   - sudo service postgresql stop
-  - sudo service postgresql start $POSTGRESQL_VERSION
+  - sudo pg_ctlcluster $POSTGRESQL_VERSION main start
   - pg_lsclusters
   - sudo apt-get install postgresql-server-dev-$POSTGRESQL_VERSION
   - git clone https://github.com/google/brotli.git
