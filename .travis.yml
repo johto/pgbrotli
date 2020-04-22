@@ -1,0 +1,24 @@
+language: c
+
+compiler:
+  - clang
+  - gcc
+
+before_install:
+  - sudo service postgresql stop
+  - sudo service postgresql start $POSTGRESQL_VERSION
+  - sudo apt-get install postgresql-server-dev-$POSTGRESQL_VERSION
+
+env:
+  global:
+    - PGDATABASE=postgres
+    - PGUSER=postgres
+
+  matrix:
+    - POSTGRESQL_VERSION=12
+    - POSTGRESQL_VERSION=11
+
+script:
+  - make
+  - sudo make install
+  - make installcheck || (cat regression.diffs && /bin/false)

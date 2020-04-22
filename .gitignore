@@ -1,0 +1,8 @@
+.*.swp
+/brotli
+/.deps
+/pgbrotli.o
+/pgbrotli.so
+/results
+/regression.out
+/regression.diffs
