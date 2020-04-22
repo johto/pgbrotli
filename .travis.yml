@@ -22,8 +22,8 @@ env:
     - PGUSER=postgres
 
   matrix:
-    - POSTGRESQL_VERSION=12
-    - POSTGRESQL_VERSION=11
+    - POSTGRESQL_VERSION=9.6
+    - POSTGRESQL_VERSION=10
 
 script:
   - make
