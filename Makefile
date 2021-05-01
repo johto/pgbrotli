@@ -1,6 +1,6 @@
 MODULE_big = pgbrotli
 OBJS = pgbrotli.o
-SHLIB_LINK = brotli_install/lib/libbrotlicommon-static.a brotli_install/lib/libbrotlidec-static.a brotli_install/lib/libbrotlienc-static.a
+SHLIB_LINK = ./brotli_install/lib/libbrotlienc-static.a ./brotli_install/lib/libbrotlidec-static.a ./brotli_install/lib/libbrotlicommon-static.a
 PG_CPPFLAGS = -I./brotli_install/include
 
 EXTENSION = pgbrotli
