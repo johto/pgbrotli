@@ -3,6 +3,7 @@
 /brotli_install
 /.deps
 /pgbrotli.o
+/pgbrotli.bc
 /pgbrotli.so
 /results
 /regression.out
