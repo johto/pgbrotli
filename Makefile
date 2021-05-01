@@ -1,7 +1,7 @@
 MODULE_big = pgbrotli
 OBJS = pgbrotli.o
-SHLIB_LINK = brotli/libbrotlicommon-static.a brotli/libbrotlidec-static.a brotli/libbrotlienc-static.a
-PG_CPPFLAGS = -I./brotli/c/include
+SHLIB_LINK = brotli_install/lib/libbrotlicommon-static.a brotli_install/lib/libbrotlidec-static.a brotli_install/lib/libbrotlienc-static.a
+PG_CPPFLAGS = -I./brotli_install/include
 
 EXTENSION = pgbrotli
 DATA = pgbrotli--1.0.sql

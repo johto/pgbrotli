@@ -1,5 +1,6 @@
 .*.swp
 /brotli
+/brotli_install
 /.deps
 /pgbrotli.o
 /pgbrotli.so
